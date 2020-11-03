@@ -72,18 +72,6 @@ services:
     depends_on:
       - elasticsearch
 
-  evebox:
-    image: jasonish/evebox:latest
-    ports: 
-      - :5636:5636"
-    networks: 
-      - elk
-    depends_on: 
-      - elasticsearch
-    command: -e http://elasticsearch:9200
-      
-
-
 networks:
   elk:
     driver: bridge
