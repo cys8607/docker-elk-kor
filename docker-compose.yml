@@ -40,7 +40,7 @@ services:
         source: ./logstash/pipeline
         target: /usr/share/logstash/pipeline
         read_only: true
-      - type: volume
+      - type: bind
         source: /var/log/suricata/
         target: /var/log/suricata/
         read_only: true  
